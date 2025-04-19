@@ -1,4 +1,6 @@
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import NavBar from "@/components/navbar";
 
 export const metadata = {
   title: "Vera Zhang",
@@ -8,7 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          <NavBar></NavBar>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

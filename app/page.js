@@ -1,12 +1,19 @@
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Home() {
+  const { language } = useLanguage();
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <header className="flex flex-col row-start-1 items-center justify-center"></header>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        hello world
+        {language === "English" ? (
+          <div>Hello World</div>
+        ) : (
+          <div>你好，世界</div>
+        )}
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        Vera Zhang
-      </footer>
     </div>
   );
 }
