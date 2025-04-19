@@ -4,7 +4,7 @@ import NavBar from "@/components/navbar";
 
 export const metadata = {
   title: "Vera Zhang",
-  description: "Welcome to world of art.",
+  description: "Contemporary Chinese Artist Producing Fine Art.",
 };
 
 export default function RootLayout({ children }) {

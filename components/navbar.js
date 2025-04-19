@@ -13,6 +13,11 @@ const links = [
     engName: "Home",
     zhName: "首页",
   },
+  {
+    href: "/about",
+    engName: "About",
+    zhName: "关于",
+  },
 ];
 
 export default function NavBar() {
