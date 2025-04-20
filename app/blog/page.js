@@ -22,6 +22,9 @@ export default function Blog() {
             ? "What is creative freedom?"
             : "什么是创作自由？"}
         </Link>
+        <Link className="hover:text-pink-500" href="/blog/brain">
+          {language === "English" ? "Art is brain food" : "艺术是大脑的食物"}
+        </Link>
       </main>
     </div>
   );
