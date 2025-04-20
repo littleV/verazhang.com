@@ -30,6 +30,9 @@ export default function About() {
           <div>那么我用中文再自我介绍一下，我叫Vera Zhang。</div>
           <div>我的工作是程序媛，业余爱好画画。</div>
           <div>希望能用画传递情绪，就这么简单。</div>
+          <div className="w-3/5 h-[1px] bg-gray-300 my-6"></div>
+          <div>Contact Me:</div>
+          <div>verazhangsite@gmail.com</div>
         </div>
       </main>
     </div>
