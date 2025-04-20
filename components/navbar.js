@@ -55,7 +55,7 @@ export default function NavBar() {
     >
       <div className="flex justify-between items-center">
         <div className="z-10 p-2">
-          <Link href="/">
+          <Link className="hover:text-pink-500" href="/">
             <Image
               className="rounded-full"
               src={logo}
@@ -72,7 +72,7 @@ export default function NavBar() {
               {links.map((link, index) => {
                 return (
                   <li className="p-4" key={index}>
-                    <Link href={link.href}>
+                    <Link className="hover:text-pink-500" href={link.href}>
                       {language === "English" ? link.engName : link.zhName}
                     </Link>
                   </li>
@@ -126,12 +126,8 @@ export default function NavBar() {
             <ul>
               {links.map((link, index) => {
                 return (
-                  <li
-                    onClick={handleNav}
-                    className="p-4 text-4xl hover:text-gray-500"
-                    key={index}
-                  >
-                    <Link href={link.href}>
+                  <li onClick={handleNav} className="p-4 text-4xl" key={index}>
+                    <Link className="hover:text-pink-500" href={link.href}>
                       {language === "English" ? link.engName : link.zhName}
                     </Link>
                   </li>
