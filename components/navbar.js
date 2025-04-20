@@ -23,6 +23,11 @@ const links = [
     engName: "Blog",
     zhName: "博客",
   },
+  {
+    href: "/legal",
+    engName: "Privacy Policy",
+    zhName: "隐私政策",
+  },
 ];
 
 export default function NavBar() {
@@ -83,8 +88,10 @@ export default function NavBar() {
           <div className="p-2 z-10">
             <div className="relative">
               <select
-                style={{ color: `${textColor}` }}
-                className="appearance-none bg-transparent border border-gray-300 rounded px-3 py-1 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                style={nav ? { color: "white" } : { color: `${textColor}` }}
+                className={
+                  "appearance-none bg-transparent border border-gray-300 rounded px-3 py-1 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                }
                 defaultValue={language}
                 onChange={(e) => {
                   switchLanguage(e.target.value);
@@ -95,7 +102,7 @@ export default function NavBar() {
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
                 <svg
-                  style={{ color: `${textColor}` }}
+                  style={nav ? { color: "white" } : { color: `${textColor}` }}
                   className="h-4 w-4 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
