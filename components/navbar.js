@@ -19,6 +19,11 @@ const links = [
     zhName: "关于",
   },
   {
+    href: "/art",
+    engName: "Art",
+    zhName: "艺术",
+  },
+  {
     href: "/blog",
     engName: "Blog",
     zhName: "博客",
