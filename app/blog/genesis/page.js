@@ -1,7 +1,7 @@
 export default function Opening() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="flex flex-col items-start justify-start min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <main className="flex flex-col gap-[32px] items-start mt-20">
         <div className="text-3xl">Genesis, a computing model</div>
         <div>
           If the universe is a math model, the equation should be simple. It
@@ -27,6 +27,8 @@ export default function Opening() {
         <div>
           I don&apos;t know, but I&apos;m an engineer, I can just build it.
         </div>
+      </main>
+      <footer className="flex flex-col items-start">
         <div>
           <p className="mb-2">
             Here&apos;s a simple Python implementation of this concept:
@@ -134,7 +136,7 @@ for x in range(1,100):
 `}</code>
           </pre>
         </div>
-      </main>
+      </footer>
     </div>
   );
 }

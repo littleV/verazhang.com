@@ -58,6 +58,7 @@ export default function Slides({ id, slides, width, height }) {
                   style={{ objectFit: "contain" }}
                   src={slide.image}
                   alt={slide.name}
+                  priority={true}
                 />
               </div>
             )}

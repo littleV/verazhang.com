@@ -1,41 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
 
-// Nav links
-const links = [
-  {
-    href: "/",
-    engName: "Home",
-    zhName: "首页",
-  },
-  {
-    href: "/about",
-    engName: "About",
-    zhName: "关于",
-  },
-  {
-    href: "/art",
-    engName: "Art",
-    zhName: "艺术",
-  },
-  {
-    href: "/blog",
-    engName: "Blog",
-    zhName: "博客",
-  },
-  {
-    href: "/legal",
-    engName: "Privacy Policy",
-    zhName: "隐私政策",
-  },
-];
-
-export default function NavBar() {
+export default function NavBar({ links, hideNavBarPaths }) {
   const { language, switchLanguage } = useLanguage();
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
@@ -58,6 +30,9 @@ export default function NavBar() {
     };
     window.addEventListener("scroll", changeColor);
   }, []);
+  const pathName = usePathname();
+  if (hideNavBarPaths.includes(pathName) || language === null) return null;
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -97,7 +72,7 @@ export default function NavBar() {
                 className={
                   "appearance-none bg-transparent border border-gray-300 rounded px-3 py-1 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
                 }
-                defaultValue={language}
+                value={language}
                 onChange={(e) => {
                   switchLanguage(e.target.value);
                 }}
