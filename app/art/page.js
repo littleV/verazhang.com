@@ -1,7 +1,7 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
+import { useState } from "react";
 
 const arts = [
   { id: 0, name: "corner-one" },
@@ -79,6 +79,7 @@ const arts = [
 ];
 
 export default function Home() {
+  const [displayItem, setDisplayItem] = useState(null);
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col row-start-2 items-center sm:items-start">
@@ -86,15 +87,43 @@ export default function Home() {
           {arts.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-6 w-full h-full flex flex-col items-center justify-center shadow-md"
+              className="bg-white p-6 w-full h-full flex flex-col items-center justify-center shadow-md relative"
             >
               <Image
                 width={300}
                 height={250}
-                alt="art"
+                alt={`${item.name}`}
                 src={`/art/${item.name}.jpg`}
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain cursor-pointer"
+                onClick={() => {
+                  setDisplayItem(item);
+                }}
               />
+
+              {/* Popup overlay */}
+              {displayItem !== null ? (
+                <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
+                  <div className="relative max-w-[90vw] max-h-[90vh]">
+                    <button
+                      className="absolute top-4 right-4 bg-white rounded-full p-2 text-black font-bold z-10 border-2 border-black"
+                      onClick={() => {
+                        setDisplayItem(null);
+                      }}
+                    >
+                      X
+                    </button>
+                    <Image
+                      width={1200}
+                      height={1000}
+                      alt={`${displayItem.name} enlarged`}
+                      src={`/art/${displayItem.name}.jpg`}
+                      className="max-w-full max-h-[90vh] object-contain"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <></>
+              )}
             </div>
           ))}
         </div>
