@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/aeb6be20cbb2d18c.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-a903415f896b97a0.js"/><script src="/_next/static/chunks/4bd1b696-647ed93fb4e77618.js" async=""></script><script src="/_next/static/chunks/684-2bb7e6a4fb4f9a74.js" async=""></script><script src="/_next/static/chunks/main-app-def7ff4aacd85d7d.js" async=""></script><script src="/_next/static/chunks/479ba886-8abcfe34d7e951cd.js" async=""></script><script src="/_next/static/chunks/971-77a60b7c352355e8.js" async=""></script><script src="/_next/static/chunks/874-b1c51c32ac41a820.js" async=""></script><script src="/_next/static/chunks/766-098d54301095553c.js" async=""></script><script src="/_next/static/chunks/app/layout-e8a3a67d1ded4721.js" async=""></script><script src="/_next/static/chunks/app/not-found-356c474a3584be67.js" async=""></script><title>Vera Zhang</title><meta name="description" content="Contemporary Chinese Artist Producing Fine Art."/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48"/><script>document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))</script><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div class="flex flex-col items-start justify-start min-h-screen p-8 pb-20 gap-16 sm:p-20"><main class="flex flex-col gap-[32px] items-start mt-20"><div class="text-3xl">Genesis, a computing model</div><div>If the universe is a math model, the equation should be simple. It should be 1+1 !=2.</div><div>Translate this into computer science language, we can define a program with the following foundations:</div><div><ul><li>1. Randomness exists</li><li>2. Randomness can only generate 0 or 1</li><li>3. Let equation to be 1 + 1 != 2, it is true for 2 out of 3 times</li></ul></div><div>Then build the rest of computing laws on top of it. Then take in information, let it compute, let it learn. What would the result be?</div><div>I don&#x27;t know, but I&#x27;m an engineer, I can just build it.</div></main><footer class="flex flex-col items-start"><div><p class="mb-2">Here&#x27;s a simple Python implementation of this concept:</p><pre class="bg-gray-100 text-gray-500 p-4 rounded-md overflow-x-auto text-sm"><code>import random
+
+def random01():
+    return random.randint(0,1)
+
+# if 1+1 !=2 is false, it&#x27;s easy, everything is normal
+# but if 1+1 != 2 is true, what value should it be?
+def baseRuleWhenOneMeetOne():
+	# In binary
+	# 0 case, 1 + 1 = 0
+	# 1 case, 1 + 1 = 1
+	# 2 case, 1 + 1 = 10
+	while True:
+		a = random01()
+		a = (a&lt;&lt;1) ^ random01()
+		if a == 0:
+			return 0  
+		if a == 1:
+			return 1
+		if a == 2:
+			return 2
+
+def ruleWhenZeroMeetZero(baseRule):
+	map = {
+		0: 1,
+		1: 2,
+		2: 0
+	}
+	return map.get(baseRule)
+
+def ruleWhenZeroMeetOne(baseRule):
+	map = {
+		0: 2,
+		1: 0,
+		2: 1
+	}
+	return map.get(baseRule)
+
+def mergeTwoBits(a, b):
+	baseRule = baseRuleWhenOneMeetOne()
+	if a== 1 and b == 1:
+		return baseRule
+	elif a == 0 and b == 0:
+		return ruleWhenZeroMeetZero(baseRule)
+	elif (a == 0 and b == 1) or (a == 1 and b == 0):
+		return ruleWhenZeroMeetOne(baseRule)
+	else:
+		raise GenesisException(&quot;Invalid input for adding two bits.&quot;)
+
+def mergeArrayOfBits(arrayA, arrayB):
+	lenA = len(arrayA)
+	lenB = len(arrayB)
+	if (lenA &lt; lenB) :
+		tmp = arrayA
+		arrayA = arrayB
+		arrayB = tmp
+		lenA = len(arrayA)
+		lenB = len(arrayB)
+	result = []
+	for i in range(0, lenB):
+		tmpBit = mergeTwoBits(arrayA[i], arrayB[i])
+		currentBit = tmpBit % 2
+		carry = tmpBit / 2
+		result.append(currentBit)
+		if carry &gt; 0:
+			arrayA = arrayA[0:i +1] + mergeArrayOfBits([1], arrayA[i+1:])
+	result = result + arrayA[lenB:]
+	return result
+		
+
+class GenesisException(Exception):
+    pass
+
+def add(a, b):
+	if notInRange(a) or notInRange(b):
+		raise GenesisException(&quot;Invalid input for addition.&quot;)
+	a = bits(a)
+	b = bits(b)
+	a.reverse()
+	b.reverse()
+	result = mergeArrayOfBits(a, b)
+	result.reverse()
+	return decimal(result)
+
+def notInRange(number):
+	return number&lt;0 or (not isinstance(number, int))
+
+def bits(number):
+	return [int(d) for d in str(bin(number))[2:]]
+
+def decimal(arrayOfDigits):
+	n = 0
+	for d in arrayOfDigits:
+		n = n *2 + d
+	return n
+
+# test the new add
+for x in range(1,100):
+	print(add(2,5))
+</code></pre></div></footer></div><!--$--><!--/$--><!--$--><!--/$--><script src="/_next/static/chunks/webpack-a903415f896b97a0.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[7122,[\"380\",\"static/chunks/479ba886-8abcfe34d7e951cd.js\",\"971\",\"static/chunks/971-77a60b7c352355e8.js\",\"874\",\"static/chunks/874-b1c51c32ac41a820.js\",\"766\",\"static/chunks/766-098d54301095553c.js\",\"177\",\"static/chunks/app/layout-e8a3a67d1ded4721.js\"],\"LanguageProvider\"]\n3:I[6595,[\"380\",\"static/chunks/479ba886-8abcfe34d7e951cd.js\",\"971\",\"static/chunks/971-77a60b7c352355e8.js\",\"874\",\"static/chunks/874-b1c51c32ac41a820.js\",\"766\",\"static/chunks/766-098d54301095553c.js\",\"177\",\"static/chunks/app/layout-e8a3a67d1ded4721.js\"],\"default\"]\n4:I[7555,[],\"\"]\n5:I[1295,[],\"\"]\n6:I[6874,[\"874\",\"static/chunks/874-b1c51c32ac41a820.js\",\"345\",\"static/chunks/app/not-found-356c474a3584be67.js\"],\"\"]\n8:I[9665,[],\"MetadataBoundary\"]\na:I[9665,[],\"OutletBoundary\"]\nd:I[4911,[],\"AsyncMetadataOutlet\"]\nf:I[9665,[],\"ViewportBoundary\"]\n11:I[6614,[],\"\"]\n:HL[\"/_next/static/css/aeb6be20cbb2d18c.css\",\"style\"]\n7:T7bb,import random\n\ndef random01():\n    return random.randint(0,1)\n\n# if 1+1 !=2 is false, it's easy, everything is normal\n# but if 1+1 != 2 is true, what value should it be?\ndef baseRuleWhenOneMeetOne():\n\t# In binary\n\t# 0 case, 1 + 1 = 0\n\t# 1 case, 1 + 1 = 1\n\t# 2 case, 1 + 1 = 10\n\twhile True:\n\t\ta = random01()\n\t\ta = (a\u003c\u003c1) ^ random01()\n\t\tif a == 0:\n\t\t\treturn 0  \n\t\tif a == 1:\n\t\t\treturn 1\n\t\tif a == 2:\n\t\t\treturn 2\n\ndef ruleWhenZeroMeetZero(baseRule):\n\tmap = {\n\t\t0: 1,\n\t\t1: 2,\n\t\t2: 0\n\t}\n\treturn map.get(baseRule)\n\ndef ruleWhenZeroMeetOne(baseRule):\n\tmap = {\n\t\t0: 2,\n\t\t1: 0,\n\t\t2: 1\n\t}\n\treturn map.get(baseRule)\n\ndef mergeTwoBits(a, b):\n\tbaseRule = baseRuleWhenOneMeetOne()\n\tif a== 1 and b == 1:\n\t\treturn baseRule\n\telif a == 0 and b == 0:\n\t\treturn ruleWhenZeroMeetZero(baseRule)\n\telif (a == 0 and b == 1) or (a == 1 and b == 0):\n\t\treturn ruleWhenZeroMeetOne(baseRule)\n\telse:\n\t\traise GenesisException(\"Invalid input for adding two bits.\")\n\ndef mergeArrayOfBits(arrayA, arrayB):\n\tlenA = len(arrayA)\n\tlenB = len(arrayB)\n\tif (lenA \u003c lenB) :\n\t\ttmp = arrayA\n\t\tarrayA = arrayB\n\t\tarrayB = tmp\n\t\tlenA = len(arrayA)\n\t\tlenB = len(arrayB)\n\tresult = []\n\t"])</script><script>self.__next_f.push([1,"for i in range(0, lenB):\n\t\ttmpBit = mergeTwoBits(arrayA[i], arrayB[i])\n\t\tcurrentBit = tmpBit % 2\n\t\tcarry = tmpBit / 2\n\t\tresult.append(currentBit)\n\t\tif carry \u003e 0:\n\t\t\tarrayA = arrayA[0:i +1] + mergeArrayOfBits([1], arrayA[i+1:])\n\tresult = result + arrayA[lenB:]\n\treturn result\n\t\t\n\nclass GenesisException(Exception):\n    pass\n\ndef add(a, b):\n\tif notInRange(a) or notInRange(b):\n\t\traise GenesisException(\"Invalid input for addition.\")\n\ta = bits(a)\n\tb = bits(b)\n\ta.reverse()\n\tb.reverse()\n\tresult = mergeArrayOfBits(a, b)\n\tresult.reverse()\n\treturn decimal(result)\n\ndef notInRange(number):\n\treturn number\u003c0 or (not isinstance(number, int))\n\ndef bits(number):\n\treturn [int(d) for d in str(bin(number))[2:]]\n\ndef decimal(arrayOfDigits):\n\tn = 0\n\tfor d in arrayOfDigits:\n\t\tn = n *2 + d\n\treturn n\n\n# test the new add\nfor x in range(1,100):\n\tprint(add(2,5))\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"V1-U6ZrL5Fb3K9pqOqtTK\",\"p\":\"\",\"c\":[\"\",\"blog\",\"genesis\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"blog\",{\"children\":[\"genesis\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/aeb6be20cbb2d18c.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"children\":[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[[\"$\",\"$L3\",null,{\"links\":[{\"href\":\"/\",\"engName\":\"Home\",\"zhName\":\"首页\"},{\"href\":\"/about\",\"engName\":\"About\",\"zhName\":\"关于\"},{\"href\":\"/art\",\"engName\":\"Art\",\"zhName\":\"艺术\"},{\"href\":\"/blog\",\"engName\":\"Blog\",\"zhName\":\"博客\"},{\"href\":\"/legal\",\"engName\":\"Privacy Policy\",\"zhName\":\"隐私政策\"}],\"hideNavBarPaths\":[\"/qr\"]}],[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center justify-center min-h-screen\",\"children\":[[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[\"You have reached a page that does not exist or was removed. Please visit\",\" \",[\"$\",\"$L6\",null,{\"className\":\"text-blue-500\",\"href\":\"/\",\"children\":\"Home\"}],\" \",\"for more.\"]}],[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[\"您访问了一个不存在或者已经删除的页面。更多内容请访问\",[\"$\",\"$L6\",null,{\"className\":\"text-blue-500\",\"href\":\"/\",\"children\":\"首页\"}],\"。\"]}]]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]}]}]]}],{\"children\":[\"blog\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"genesis\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"div\",null,{\"className\":\"flex flex-col items-start justify-start min-h-screen p-8 pb-20 gap-16 sm:p-20\",\"children\":[[\"$\",\"main\",null,{\"className\":\"flex flex-col gap-[32px] items-start mt-20\",\"children\":[[\"$\",\"div\",null,{\"className\":\"text-3xl\",\"children\":\"Genesis, a computing model\"}],[\"$\",\"div\",null,{\"children\":\"If the universe is a math model, the equation should be simple. It should be 1+1 !=2.\"}],[\"$\",\"div\",null,{\"children\":\"Translate this into computer science language, we can define a program with the following foundations:\"}],[\"$\",\"div\",null,{\"children\":[\"$\",\"ul\",null,{\"children\":[[\"$\",\"li\",null,{\"children\":\"1. Randomness exists\"}],[\"$\",\"li\",null,{\"children\":\"2. Randomness can only generate 0 or 1\"}],[\"$\",\"li\",null,{\"children\":\"3. Let equation to be 1 + 1 != 2, it is true for 2 out of 3 times\"}]]}]}],[\"$\",\"div\",null,{\"children\":\"Then build the rest of computing laws on top of it. Then take in information, let it compute, let it learn. What would the result be?\"}],[\"$\",\"div\",null,{\"children\":\"I don't know, but I'm an engineer, I can just build it.\"}]]}],[\"$\",\"footer\",null,{\"className\":\"flex flex-col items-start\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"mb-2\",\"children\":\"Here's a simple Python implementation of this concept:\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-100 text-gray-500 p-4 rounded-md overflow-x-auto text-sm\",\"children\":[\"$\",\"code\",null,{\"children\":\"$7\"}]}]]}]}]]}],[\"$\",\"$L8\",null,{\"children\":\"$L9\"}],null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",\"$Lc\",[\"$\",\"$Ld\",null,{\"promise\":\"$@e\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"b2WyB8BxKLAgOFXF7lkWP\",{\"children\":[[\"$\",\"$Lf\",null,{\"children\":\"$L10\"}],null]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$11\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"12:\"$Sreact.suspense\"\n13:I[4911,[],\"AsyncMetadata\"]\n9:[\"$\",\"$12\",null,{\"fallback\":null,\"children\":[\"$\",\"$L13\",null,{\"promise\":\"$@14\"}]}]\n"])</script><script>self.__next_f.push([1,"c:null\n"])</script><script>self.__next_f.push([1,"10:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])</script><script>self.__next_f.push([1,"14:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Vera Zhang\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Contemporary Chinese Artist Producing Fine Art.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"48x48\"}]],\"error\":null,\"digest\":\"$undefined\"}\ne:{\"metadata\":\"$14:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n"])</script></body></html>
