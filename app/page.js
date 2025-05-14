@@ -28,7 +28,7 @@ export default function Home() {
         <div className="text-3xl ">
           {language === "English" ? "The Love Story" : "爱情故事"}
         </div>
-        <Slides slides={slides} width="80vw" height="70vh" />
+        <Slides slides={slides} width="80vw" height="70vh" interval={15000} />
       </main>
     </div>
   );
