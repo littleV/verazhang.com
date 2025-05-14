@@ -12,19 +12,24 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 //   }
 // ];
 
-export default function Slides({ id, slides, width, height }) {
+export default function Slides({ id, slides, width, height, interval }) {
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
   const nextSlide = useCallback(() => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  }, [current, length]);
+    setCurrent(current === slides.length - 1 ? 0 : current + 1);
+  }, [current, slides]);
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === 0 ? slides.length - 1 : current - 1);
   };
   useEffect(() => {
-    const interval = setInterval(nextSlide, 15000); // Change slide
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
-  }, [nextSlide]);
+    if (interval) {
+      const next = setInterval(nextSlide, interval); // Change slide
+      return () => {
+        clearInterval(next);
+      }; // Cleanup the interval on component unmount
+    } else {
+      return () => {};
+    }
+  }, [nextSlide, interval]);
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;

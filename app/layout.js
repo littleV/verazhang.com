@@ -36,7 +36,7 @@ const links = [
   },
 ];
 
-const hideNavBarPaths = ["/qr"];
+const hideNavBarPaths = ["/qr", "/thestory"];
 
 export default function RootLayout({ children }) {
   return (
