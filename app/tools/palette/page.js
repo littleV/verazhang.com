@@ -281,7 +281,7 @@ export default function Blog() {
     const x_blue = Math.floor(((red + yellow) / total) * 300);
     const width_blue = Math.floor((blue / total) * 300);
     const x_white = Math.floor(((red + yellow + blue) / total) * 300);
-    const width_white = Math.floor((white / blue) * 300);
+    const width_white = Math.floor((white / total) * 300);
     return (
       <div className="flex flex-col justify-center items-center mt-2">
         {language == "English" ? "Ratio" : "比例"}
