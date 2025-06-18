@@ -40,7 +40,7 @@ const hideNavBarPaths = ["/qr", "/thestory"];
 
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en">
       <body>
         <LanguageProvider>
           <NavBar links={links} hideNavBarPaths={hideNavBarPaths}></NavBar>

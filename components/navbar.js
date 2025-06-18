@@ -29,6 +29,9 @@ export default function NavBar({ links, hideNavBarPaths }) {
       }
     };
     window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
   }, []);
   const pathName = usePathname();
   if (hideNavBarPaths.includes(pathName) || language === null) return null;
