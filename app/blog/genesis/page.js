@@ -1,17 +1,17 @@
-export default function Opening() {
+export default function Genesis() {
   return (
-    <div className="flex flex-col items-start justify-start min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] items-start mt-20">
-        <div className="text-3xl">Genesis, a computing model</div>
-        <div>
+    <div className="m-20">
+      <main>
+        <div className="text-3xl mb-5">Genesis, a computing model</div>
+        <div className="mb-2">
           If the universe is a math model, the equation should be simple. It
           should be 1+1 !=2.
         </div>
-        <div>
+        <div className="mb-2">
           Translate this into computer science language, we can define a program
           with the following foundations:
         </div>
-        <div>
+        <div className="mb-2">
           <ul>
             <li>1. Randomness exists</li>
             <li>2. Randomness can only generate 0 or 1</li>
@@ -20,16 +20,16 @@ export default function Opening() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mb-2">
           Then build the rest of computing laws on top of it. Then take in
           information, let it compute, let it learn. What would the result be?
         </div>
-        <div>
+        <div className="mb-2">
           I don&apos;t know, but I&apos;m an engineer, I can just build it.
         </div>
       </main>
       <footer className="flex flex-col items-start">
-        <div>
+        <div className="mb-2">
           <p className="mb-2">
             Here&apos;s a simple Python implementation of this concept:
           </p>
