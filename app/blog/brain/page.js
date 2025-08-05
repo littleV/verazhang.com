@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export default function Creative() {
+export default function Brain() {
   const { language } = useLanguage();
   if (language === null) return null;
   return (

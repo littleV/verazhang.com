@@ -26,6 +26,9 @@ export default function Blog() {
         <Link className="hover:text-pink-500" href="/blog/brain">
           {language === "English" ? "Art is brain food" : "艺术是大脑的食物"}
         </Link>
+        <Link className="hover:text-pink-500" href="/blog/emotions">
+          {language === "English" ? "Emotion Stories" : "情绪故事"}
+        </Link>
       </main>
     </div>
   );
