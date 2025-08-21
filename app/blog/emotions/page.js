@@ -45,6 +45,11 @@ export default function Emotions() {
             {language === "English" ? "Bafflement" : "困惑"}
           </Link>
         </li>
+        <li className="list-disc">
+          <Link className="hover:text-pink-500" href="/blog/emotions/basorexia">
+            {language === "English" ? "Basorexia" : "突然强烈的想亲吻某人"}
+          </Link>
+        </li>
       </ul>
     </div>
   );
