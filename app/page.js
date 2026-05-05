@@ -22,13 +22,11 @@ export default function Home() {
   const { language } = useLanguage();
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <div className="text-3xl ">
-          {language === "English" ? "The Love Story" : "爱情故事"}
-        </div>
-        <Slides slides={slides} width="80vw" height="70vh" interval={15000} />
-      </main>
+    <div className="flex flex-col gap-[32px] row-start-2 items-center">
+      <h1 className="text-3xl ">
+        {language === "English" ? "The Love Story" : "爱情故事"}
+      </h1>
+      <Slides slides={slides} width="80vw" height="70vh" interval={15000} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 export default function Genesis() {
   return (
     <div className="m-20">
-      <main>
+      <div>
         <div className="text-3xl mb-5">Genesis, a computing model</div>
         <div className="mb-2">
           If the universe is a math model, the equation should be simple. It
@@ -27,7 +27,7 @@ export default function Genesis() {
         <div className="mb-2">
           I don&apos;t know, but I&apos;m an engineer, I can just build it.
         </div>
-      </main>
+      </div>
       <footer className="flex flex-col items-start">
         <div className="mb-2">
           <p className="mb-2">

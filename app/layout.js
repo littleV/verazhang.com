@@ -36,7 +36,13 @@ const links = [
   },
 ];
 
-const hideNavBarPaths = ["/qr", "/thestory"];
+const hideNavBarPaths = [
+  "/qr",
+  "/thestory",
+  "/lines",
+  "/tools",
+  "/tools/palette",
+];
 
 export default function RootLayout({ children }) {
   return (
@@ -44,7 +50,9 @@ export default function RootLayout({ children }) {
       <body>
         <LanguageProvider>
           <NavBar links={links} hideNavBarPaths={hideNavBarPaths}></NavBar>
-          {children}
+          <main className="pt-16 min-h-screen flex flex-col items-center justify-center px-4 sm:px-8">
+            {children}
+          </main>
         </LanguageProvider>
       </body>
     </html>

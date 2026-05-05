@@ -28,7 +28,7 @@ const MAGIC_LINES = {
 };
 
 export default function Blog() {
-  const { language } = useLanguage();
+  const { language, switchLanguage } = useLanguage();
   const [whiteScale, setWhiteScale] = useState(0);
   const [chosenColor, setChosenColor] = useState([0, 0, 0]);
   const [chosenColorHex, setChosenColorHex] = useState("ffffff");
@@ -336,103 +336,132 @@ export default function Blog() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen mt-20">
-      {(() => {
-        switch (whiteScale) {
-          case 0:
-            return (
-              <div>
-                <Image
-                  src="/palette/0.png"
-                  width={300}
-                  height={300}
-                  alt="0"
-                  onClick={handleImageClick}
-                  priority
-                  // Prevent dragging
-                  draggable={false}
-                />
-              </div>
-            );
-          case 50:
-            return (
-              <div>
-                <Image
-                  src="/palette/50.png"
-                  width={300}
-                  height={300}
-                  alt="50"
-                  onClick={handleImageClick}
-                  priority
-                  // Prevent dragging
-                  draggable={false}
-                />
-              </div>
-            );
-          case 100:
-            return (
-              <div>
-                <Image
-                  src="/palette/100.png"
-                  width={300}
-                  height={300}
-                  alt="100"
-                  onClick={handleImageClick}
-                  priority
-                  // Prevent dragging
-                  draggable={false}
-                />
-              </div>
-            );
-          case 150:
-            return (
-              <div>
-                <Image
-                  src="/palette/150.png"
-                  width={300}
-                  height={300}
-                  alt="150"
-                  onClick={handleImageClick}
-                  priority
-                  // Prevent dragging
-                  draggable={false}
-                />
-              </div>
-            );
-          case 200:
-            return (
-              <div>
-                <Image
-                  src="/palette/200.png"
-                  width={300}
-                  height={300}
-                  alt="200"
-                  onClick={handleImageClick}
-                  priority
-                  // Prevent dragging
-                  draggable={false}
-                />
-              </div>
-            );
-          case 250:
-            return (
-              <div>
-                <Image
-                  src="/palette/250.png"
-                  width={300}
-                  height={300}
-                  alt="250"
-                  onClick={handleImageClick}
-                  priority
-                  // Prevent dragging
-                  draggable={false}
-                />
-              </div>
-            );
-          default:
-            return <div>Unknown Error</div>;
-        }
-      })()}
+    <div className="flex flex-col items-center justify-start">
+      <div className="p-2 z-10">
+        <div className="relative w-fit">
+          <select
+            style={{ color: "white" }}
+            className={
+              "appearance-none bg-transparent border border-gray-300 rounded px-3 py-1 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+            }
+            value={language}
+            onChange={(e) => {
+              switchLanguage(e.target.value);
+            }}
+          >
+            <option value="中文">中文</option>
+            <option value="English">English</option>
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+            <svg
+              style={{ color: "white" }}
+              className="h-4 w-4 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div className="pt-4">
+        {(() => {
+          switch (whiteScale) {
+            case 0:
+              return (
+                <div>
+                  <Image
+                    src="/palette/0.png"
+                    width={300}
+                    height={300}
+                    alt="0"
+                    onClick={handleImageClick}
+                    priority
+                    // Prevent dragging
+                    draggable={false}
+                  />
+                </div>
+              );
+            case 50:
+              return (
+                <div>
+                  <Image
+                    src="/palette/50.png"
+                    width={300}
+                    height={300}
+                    alt="50"
+                    onClick={handleImageClick}
+                    priority
+                    // Prevent dragging
+                    draggable={false}
+                  />
+                </div>
+              );
+            case 100:
+              return (
+                <div>
+                  <Image
+                    src="/palette/100.png"
+                    width={300}
+                    height={300}
+                    alt="100"
+                    onClick={handleImageClick}
+                    priority
+                    // Prevent dragging
+                    draggable={false}
+                  />
+                </div>
+              );
+            case 150:
+              return (
+                <div>
+                  <Image
+                    src="/palette/150.png"
+                    width={300}
+                    height={300}
+                    alt="150"
+                    onClick={handleImageClick}
+                    priority
+                    // Prevent dragging
+                    draggable={false}
+                  />
+                </div>
+              );
+            case 200:
+              return (
+                <div>
+                  <Image
+                    src="/palette/200.png"
+                    width={300}
+                    height={300}
+                    alt="200"
+                    onClick={handleImageClick}
+                    priority
+                    // Prevent dragging
+                    draggable={false}
+                  />
+                </div>
+              );
+            case 250:
+              return (
+                <div>
+                  <Image
+                    src="/palette/250.png"
+                    width={300}
+                    height={300}
+                    alt="250"
+                    onClick={handleImageClick}
+                    priority
+                    // Prevent dragging
+                    draggable={false}
+                  />
+                </div>
+              );
+            default:
+              return <div>Unknown Error</div>;
+          }
+        })()}
+      </div>
       <div className="mt-8 w-full max-w-md mx-auto">
         <input
           id="scale-slider"
@@ -450,7 +479,7 @@ export default function Blog() {
       <div>
         {language == "English"
           ? "Chosen Color: #" + chosenColorHex
-          : "选择颜色：#" + chosenColorHex}
+          : "已选颜色：#" + chosenColorHex}
       </div>
       <div
         className="mt-2 p-1 min-w-24"
