@@ -6,7 +6,7 @@ import { setCookie, getCookie } from "cookies-next";
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(null);
+  const [language, setLanguage] = useState("English");
 
   // Functions to modify the context
   const switchLanguage = (language) => {

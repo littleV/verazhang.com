@@ -1,0 +1,27 @@
+# Vera Zhang
+
+> Contemporary Chinese artist. Personal site featuring fine art paintings, bilingual writing on creativity.
+
+Vera Zhang is a painter at heart. The site is bilingual (English and 中文); content is authored in both languages where applicable.
+
+## Main pages
+
+- [Home](https://www.verazhang.com/): The Love Story — a featured three-piece painting series (First Sight, In Love, The Wall).
+- [About](https://www.verazhang.com/about): Bilingual bio written as a short poem.
+- [Art](https://www.verazhang.com/art): Gallery of paintings.
+- [Blog](https://www.verazhang.com/blog): Writing on art, emotion, and craft.
+
+## Blog posts
+
+- [Brain](https://www.verazhang.com/blog/brain)
+- [Creative Freedom](https://www.verazhang.com/blog/creative-freedom)
+- [Genesis](https://www.verazhang.com/blog/genesis)
+- [Opening](https://www.verazhang.com/blog/opening)
+
+## Optional
+
+- [Privacy Policy](https://www.verazhang.com/legal)
+
+## Contact
+
+- Email: verazhangsite@gmail.com

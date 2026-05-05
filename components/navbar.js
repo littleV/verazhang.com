@@ -34,7 +34,7 @@ export default function NavBar({ links, hideNavBarPaths }) {
     };
   }, []);
   const pathName = usePathname();
-  if (hideNavBarPaths.includes(pathName) || language === null) return null;
+  if (hideNavBarPaths.includes(pathName)) return null;
 
   return (
     <div

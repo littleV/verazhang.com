@@ -335,7 +335,6 @@ export default function Blog() {
     );
   };
 
-  if (language === null) return null;
   return (
     <div className="flex flex-col items-center justify-start min-h-screen mt-20">
       {(() => {

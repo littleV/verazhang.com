@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Brain() {
   const { language } = useLanguage();
-  if (language === null) return null;
+
   return (
     <div className="m-20">
       {language === "English" ? (

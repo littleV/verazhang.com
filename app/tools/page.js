@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Blog() {
   const { language } = useLanguage();
-  if (language === null) return null;
+
   return (
     <div className="flex flex-col m-20 items-center justify-center">
       <div>
