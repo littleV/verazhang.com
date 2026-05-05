@@ -6,10 +6,10 @@ export default function Brain() {
   const { language } = useLanguage();
 
   return (
-    <div className="m-20">
+    <div className="p-2">
       {language === "English" ? (
         <>
-          <div className="text-3xl mb-5">Art is brain food</div>
+          <h1 className="text-3xl mb-5">Art is brain food</h1>
           <div className="mb-2">
             Some heard about the famous saying, art is business, which carried
             out a big movement of commercialization of art, which, caused art so
@@ -58,7 +58,7 @@ export default function Brain() {
         </>
       ) : (
         <>
-          <div className="text-3xl mb-5">艺术是大脑的食物</div>
+          <h1 className="text-3xl mb-5">艺术是大脑的食物</h1>
           <div className="mb-2">
             艺术是大脑的食物，其实我们有更常见的说法，艺术是精神食粮。
           </div>

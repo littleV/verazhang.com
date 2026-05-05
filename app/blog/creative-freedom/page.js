@@ -6,10 +6,10 @@ export default function Creative() {
   const { language } = useLanguage();
 
   return (
-    <div className="m-20">
+    <div className="p-2">
       {language === "English" ? (
         <>
-          <div className="text-3xl mb-5">What is creative freedom?</div>
+          <h1 className="text-3xl mb-5">What is creative freedom?</h1>
           <div className="mb-2">
             I&apos;ve been taking a class about the value of art recently. I was
             tasked to answer a question: what is creative freedom? I think the
@@ -57,7 +57,7 @@ export default function Creative() {
         </>
       ) : (
         <>
-          <div className="text-3xl mb-5">什么是创作自由？</div>
+          <h1 className="text-3xl mb-5">什么是创作自由？</h1>
           <div className="mb-2">
             我最近在上一门关于艺术价值的课。其中有一个课堂问题是什么是创作自由？因为这些原则可以应用到很多领域，所以我想把我的答案给这里的小伙伴分享一下。
           </div>

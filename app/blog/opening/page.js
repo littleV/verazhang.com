@@ -1,7 +1,7 @@
 export default function Opening() {
   return (
-    <div className="m-20">
-      <div className="text-3xl mb-5">开篇寄语</div>
+    <div className="p-2">
+      <h1 className="text-3xl mb-5">开篇寄语</h1>
       <div className="mb-2">
         思考了很久第一篇博客是用中文还是英文，最后还是选择了中文。
       </div>
