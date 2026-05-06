@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[27792,["/_next/static/chunks/16bnq3i65~hl0.js","/_next/static/chunks/0p5blrzjorz-n.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0amob.uxjn59e.js","/_next/static/chunks/187g9vi-nc2kr.js"],"default"]
+3:I[97367,["/_next/static/chunks/16bnq3i65~hl0.js","/_next/static/chunks/0p5blrzjorz-n.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0amob.uxjn59e.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"@id\":\"https://www.verazhang.com/blog/brain#article\",\"url\":\"https://www.verazhang.com/blog/brain\",\"mainEntityOfPage\":\"https://www.verazhang.com/blog/brain\",\"headline\":\"Art is brain food\",\"description\":\"Essay on how art and music feed the brain. Bilingual (English / 中文).\",\"author\":{\"@id\":\"https://www.verazhang.com/#vera\"},\"datePublished\":\"2020-04-25\",\"inLanguage\":[\"en\",\"zh\"]}"}}],["$","$L2",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/187g9vi-nc2kr.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"r69M_dQwhdidBYIyQq0Ja"}
+5:null
