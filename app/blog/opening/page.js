@@ -1,11 +1,28 @@
+import { JsonLd, SITE_URL, VERA_ID } from "@/lib/jsonld";
+
 export const metadata = {
   title: "开篇寄语",
   description: "第一篇博客：关于完美主义和开始行动。",
 };
 
+const url = `${SITE_URL}/blog/opening`;
+
+const blogPosting = {
+  "@type": "BlogPosting",
+  "@id": `${url}#article`,
+  url,
+  mainEntityOfPage: url,
+  headline: "开篇寄语",
+  description: "第一篇博客：关于完美主义和开始行动。",
+  author: { "@id": VERA_ID },
+  datePublished: "2018-01-01",
+  inLanguage: "zh",
+};
+
 export default function Opening() {
   return (
     <div className="p-2">
+      <JsonLd data={blogPosting} />
       <h1 className="text-3xl mb-5">开篇寄语</h1>
       <div className="mb-2">
         思考了很久第一篇博客是用中文还是英文，最后还是选择了中文。

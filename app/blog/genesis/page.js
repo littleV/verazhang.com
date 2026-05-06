@@ -1,12 +1,30 @@
+import { JsonLd, SITE_URL, VERA_ID } from "@/lib/jsonld";
+
 export const metadata = {
   title: "Genesis, a computing model",
   description:
     "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
 };
 
+const url = `${SITE_URL}/blog/genesis`;
+
+const blogPosting = {
+  "@type": "BlogPosting",
+  "@id": `${url}#article`,
+  url,
+  mainEntityOfPage: url,
+  headline: "Genesis, a computing model",
+  description:
+    "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+  author: { "@id": VERA_ID },
+  datePublished: "2018-11-06",
+  inLanguage: "en",
+};
+
 export default function Genesis() {
   return (
     <div className="w-full max-w-3xl p-2">
+      <JsonLd data={blogPosting} />
       <h1 className="text-3xl mb-5">Genesis, a computing model</h1>
       <div className="mb-2">
         If the universe is a math model, the equation should be simple. It

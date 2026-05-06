@@ -1,6 +1,7 @@
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import NavBar from "@/components/navbar";
+import { JsonLd, veraPerson } from "@/lib/jsonld";
 
 export const metadata = {
   title: {
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <JsonLd data={veraPerson} />
         <LanguageProvider>
           <NavBar links={links} hideNavBarPaths={hideNavBarPaths}></NavBar>
           <main className="pt-16 min-h-screen flex flex-col items-center justify-center px-4 sm:px-8">
