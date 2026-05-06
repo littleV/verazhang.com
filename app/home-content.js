@@ -6,7 +6,7 @@ import Slides from "@/components/slides";
 const slides = [
   {
     image: "/art/12-instruments-accordion.jpg",
-    name: "Accordian",
+    name: "Accordion",
   },
   {
     image: "/art/12-instruments-cello.jpg",

@@ -3,14 +3,14 @@ import { og, SITE_URL } from "@/lib/jsonld";
 
 export const metadata = {
   title: {
-    absolute: "Vera Zhang — The Love Story",
+    absolute: "12 Instruments — Vera Zhang",
   },
   description:
-    "The Love Story — a three-piece painting series by contemporary Chinese artist Vera Zhang: First Sight, In Love, The Wall.",
+    "12 Instruments — a 12-piece painting series by contemporary Chinese artist Vera Zhang on musical instruments.",
   openGraph: og({
-    title: "Vera Zhang — The Love Story",
+    title: "12 Instruments — Vera Zhang",
     description:
-      "The Love Story — a three-piece painting series by contemporary Chinese artist Vera Zhang: First Sight, In Love, The Wall.",
+      "12 Instruments — a 12-piece painting series by contemporary Chinese artist Vera Zhang on musical instruments.",
     url: `${SITE_URL}/`,
   }),
 };
