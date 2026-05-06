@@ -61,7 +61,11 @@ export default function NavBar({ links, hideNavBarPaths }) {
                 return (
                   <li className="p-4" key={index}>
                     <Link className="hover:text-pink-500" href={link.href}>
-                      {language === "English" ? link.engName : link.zhName}
+                      {language === "English" ? (
+                        link.engName
+                      ) : (
+                        <span lang="zh">{link.zhName}</span>
+                      )}
                     </Link>
                   </li>
                 );
@@ -118,7 +122,11 @@ export default function NavBar({ links, hideNavBarPaths }) {
                 return (
                   <li onClick={handleNav} className="p-4 text-4xl" key={index}>
                     <Link className="hover:text-pink-500" href={link.href}>
-                      {language === "English" ? link.engName : link.zhName}
+                      {language === "English" ? (
+                        link.engName
+                      ) : (
+                        <span lang="zh">{link.zhName}</span>
+                      )}
                     </Link>
                   </li>
                 );

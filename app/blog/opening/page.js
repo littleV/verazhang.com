@@ -30,7 +30,7 @@ const blogPosting = {
 
 export default function Opening() {
   return (
-    <div className="p-2">
+    <div className="p-2" lang="zh">
       <JsonLd data={blogPosting} />
       <h1 className="text-3xl mb-5">开篇寄语</h1>
       <div className="mb-2">

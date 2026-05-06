@@ -24,7 +24,11 @@ export default function HomeContent() {
   return (
     <div className="flex flex-col gap-[32px] row-start-2 items-center">
       <h1 className="text-3xl ">
-        {language === "English" ? "The Love Story" : "爱情故事"}
+        {language === "English" ? (
+          "The Love Story"
+        ) : (
+          <span lang="zh">爱情故事</span>
+        )}
       </h1>
       <Slides slides={slides} width="80vw" height="70vh" interval={15000} />
     </div>

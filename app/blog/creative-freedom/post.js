@@ -6,7 +6,10 @@ export default function CreativeFreedomPost() {
   const { language } = useLanguage();
 
   return (
-    <div className="p-2">
+    <div
+      className="p-2"
+      lang={language === "English" ? undefined : "zh"}
+    >
       {language === "English" ? (
         <>
           <h1 className="text-3xl mb-5">What is creative freedom?</h1>
