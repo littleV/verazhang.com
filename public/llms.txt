@@ -8,19 +8,19 @@ Vera Zhang is a painter at heart. The site is bilingual (English and 中文); co
 
 - [Home](https://www.verazhang.com/): The Love Story — a featured three-piece painting series (First Sight, In Love, The Wall).
 - [About](https://www.verazhang.com/about): Bilingual bio written as a short poem.
-- [Art](https://www.verazhang.com/art): Gallery of paintings.
-- [Blog](https://www.verazhang.com/blog): Writing on art, emotion, and craft.
+- [Art](https://www.verazhang.com/art): Gallery of paintings, each with a bilingual title and short description.
+- [Blog](https://www.verazhang.com/blog): Bilingual writing on art, emotion, and creativity.
 
 ## Blog posts
 
-- [Brain](https://www.verazhang.com/blog/brain)
-- [Creative Freedom](https://www.verazhang.com/blog/creative-freedom)
-- [Genesis](https://www.verazhang.com/blog/genesis)
-- [Opening](https://www.verazhang.com/blog/opening)
+- [Art is brain food](https://www.verazhang.com/blog/brain): Essay on how art and music feed the brain. Bilingual (English / 中文). Published 2020-04-25.
+- [What is creative freedom?](https://www.verazhang.com/blog/creative-freedom): Five principles for creative freedom — knowing the boundary, building your voice, mastering skills, cross-field inspiration, and acting. Bilingual (English / 中文). Published 2019-05-29.
+- [Genesis, a computing model](https://www.verazhang.com/blog/genesis): A toy computing model where 1+1 ≠ 2, with a Python implementation. Published 2018-11-06.
+- [开篇寄语 (Opening)](https://www.verazhang.com/blog/opening): First blog post, in Chinese — on perfectionism and just starting. Published 2018-01-01.
 
 ## Optional
 
-- [Privacy Policy](https://www.verazhang.com/legal)
+- [Privacy Policy](https://www.verazhang.com/legal): Privacy policy for verazhang.com.
 
 ## Contact
 
