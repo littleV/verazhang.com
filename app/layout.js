@@ -1,10 +1,16 @@
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import NavBar from "@/components/navbar";
+import { JsonLd, veraPerson, SITE_URL, og } from "@/lib/jsonld";
 
 export const metadata = {
-  title: "Vera Zhang",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Vera Zhang",
+    template: "%s — Vera Zhang",
+  },
   description: "Contemporary Chinese Artist Producing Fine Art.",
+  openGraph: og(),
 };
 
 // Nav links
@@ -36,15 +42,24 @@ const links = [
   },
 ];
 
-const hideNavBarPaths = ["/qr", "/thestory"];
+const hideNavBarPaths = [
+  "/qr",
+  "/thestory",
+  "/lines",
+  "/tools",
+  "/tools/palette",
+];
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <JsonLd data={veraPerson} />
         <LanguageProvider>
           <NavBar links={links} hideNavBarPaths={hideNavBarPaths}></NavBar>
-          {children}
+          <main className="pt-16 min-h-screen flex flex-col items-center justify-center px-4 sm:px-8">
+            {children}
+          </main>
         </LanguageProvider>
       </body>
     </html>

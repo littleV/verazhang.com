@@ -26,8 +26,6 @@ export default function QR() {
     }
   }, []);
 
-  if (language === null) return null;
-
   return (
     <div className="flex flex-col items-center justify-start">
       <div className="p-2 z-10">

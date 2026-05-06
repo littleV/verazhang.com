@@ -1,7 +1,38 @@
+import { JsonLd, SITE_URL, VERA_ID, og } from "@/lib/jsonld";
+
+export const metadata = {
+  title: "开篇寄语",
+  description: "第一篇博客：关于完美主义和开始行动。",
+  openGraph: og({
+    type: "article",
+    title: "开篇寄语 — Vera Zhang",
+    description: "第一篇博客：关于完美主义和开始行动。",
+    url: `${SITE_URL}/blog/opening`,
+    locale: "zh_CN",
+    publishedTime: "2018-01-01",
+    authors: [`${SITE_URL}/about`],
+  }),
+};
+
+const url = `${SITE_URL}/blog/opening`;
+
+const blogPosting = {
+  "@type": "BlogPosting",
+  "@id": `${url}#article`,
+  url,
+  mainEntityOfPage: url,
+  headline: "开篇寄语",
+  description: "第一篇博客：关于完美主义和开始行动。",
+  author: { "@id": VERA_ID },
+  datePublished: "2018-01-01",
+  inLanguage: "zh",
+};
+
 export default function Opening() {
   return (
-    <div className="m-20">
-      <div className="text-3xl mb-5">开篇寄语</div>
+    <div className="p-2" lang="zh">
+      <JsonLd data={blogPosting} />
+      <h1 className="text-3xl mb-5">开篇寄语</h1>
       <div className="mb-2">
         思考了很久第一篇博客是用中文还是英文，最后还是选择了中文。
       </div>

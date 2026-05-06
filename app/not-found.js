@@ -10,7 +10,7 @@ export default function NotFound() {
         </Link>{" "}
         for more.
       </div>
-      <div className="text-center">
+      <div className="text-center" lang="zh">
         您访问了一个不存在或者已经删除的页面。更多内容请访问
         <Link className="text-blue-500" href="/">
           首页

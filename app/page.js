@@ -1,35 +1,20 @@
-"use client";
+import HomeContent from "./home-content";
+import { og, SITE_URL } from "@/lib/jsonld";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-import Slides from "@/components/slides";
-
-const slides = [
-  {
-    image: "/art/love-story-one.jpg",
-    name: "First Sight",
+export const metadata = {
+  title: {
+    absolute: "12 Instruments — Vera Zhang",
   },
-  {
-    image: "/art/love-story-two.jpg",
-    name: "In Love",
-  },
-  {
-    image: "/art/love-story-three.jpg",
-    name: "The Wall",
-  },
-];
+  description:
+    "12 Instruments — a 12-piece painting series by contemporary Chinese artist Vera Zhang on musical instruments.",
+  openGraph: og({
+    title: "12 Instruments — Vera Zhang",
+    description:
+      "12 Instruments — a 12-piece painting series by contemporary Chinese artist Vera Zhang on musical instruments.",
+    url: `${SITE_URL}/`,
+  }),
+};
 
 export default function Home() {
-  const { language } = useLanguage();
-  if (language === null) return null;
-
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <div className="text-3xl ">
-          {language === "English" ? "The Love Story" : "爱情故事"}
-        </div>
-        <Slides slides={slides} width="80vw" height="70vh" interval={15000} />
-      </main>
-    </div>
-  );
+  return <HomeContent />;
 }

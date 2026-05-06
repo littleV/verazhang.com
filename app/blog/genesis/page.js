@@ -1,40 +1,70 @@
+import { JsonLd, SITE_URL, VERA_ID, og } from "@/lib/jsonld";
+
+export const metadata = {
+  title: "Genesis, a computing model",
+  description:
+    "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+  openGraph: og({
+    type: "article",
+    title: "Genesis, a computing model — Vera Zhang",
+    description:
+      "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+    url: `${SITE_URL}/blog/genesis`,
+    publishedTime: "2018-11-06",
+    authors: [`${SITE_URL}/about`],
+  }),
+};
+
+const url = `${SITE_URL}/blog/genesis`;
+
+const blogPosting = {
+  "@type": "BlogPosting",
+  "@id": `${url}#article`,
+  url,
+  mainEntityOfPage: url,
+  headline: "Genesis, a computing model",
+  description:
+    "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+  author: { "@id": VERA_ID },
+  datePublished: "2018-11-06",
+  inLanguage: "en",
+};
+
 export default function Genesis() {
   return (
-    <div className="m-20">
-      <main>
-        <div className="text-3xl mb-5">Genesis, a computing model</div>
-        <div className="mb-2">
-          If the universe is a math model, the equation should be simple. It
-          should be 1+1 !=2.
-        </div>
-        <div className="mb-2">
-          Translate this into computer science language, we can define a program
-          with the following foundations:
-        </div>
-        <div className="mb-2">
-          <ul>
-            <li>1. Randomness exists</li>
-            <li>2. Randomness can only generate 0 or 1</li>
-            <li>
-              3. Let equation to be 1 + 1 != 2, it is true for 2 out of 3 times
-            </li>
-          </ul>
-        </div>
-        <div className="mb-2">
-          Then build the rest of computing laws on top of it. Then take in
-          information, let it compute, let it learn. What would the result be?
-        </div>
-        <div className="mb-2">
-          I don&apos;t know, but I&apos;m an engineer, I can just build it.
-        </div>
-      </main>
-      <footer className="flex flex-col items-start">
-        <div className="mb-2">
-          <p className="mb-2">
-            Here&apos;s a simple Python implementation of this concept:
-          </p>
-          <pre className="bg-gray-100 text-gray-500 p-4 rounded-md overflow-x-auto text-sm">
-            <code>{`import random
+    <div className="w-full max-w-3xl p-2">
+      <JsonLd data={blogPosting} />
+      <h1 className="text-3xl mb-5">Genesis, a computing model</h1>
+      <div className="mb-2">
+        If the universe is a math model, the equation should be simple. It
+        should be 1+1 !=2.
+      </div>
+      <div className="mb-2">
+        Translate this into computer science language, we can define a program
+        with the following foundations:
+      </div>
+      <div className="mb-2">
+        <ul>
+          <li>1. Randomness exists</li>
+          <li>2. Randomness can only generate 0 or 1</li>
+          <li>
+            3. Let equation to be 1 + 1 != 2, it is true for 2 out of 3 times
+          </li>
+        </ul>
+      </div>
+      <div className="mb-2">
+        Then build the rest of computing laws on top of it. Then take in
+        information, let it compute, let it learn. What would the result be?
+      </div>
+      <div className="mb-2">
+        I don&apos;t know, but I&apos;m an engineer, I can just build it.
+      </div>
+
+      <p className="mb-2">
+        Here&apos;s a simple Python implementation of this concept:
+      </p>
+      <pre className="bg-gray-100 text-gray-500 p-4 rounded-md overflow-x-auto text-sm">
+        <code>{`import random
 
 def random01():
     return random.randint(0,1)
@@ -134,9 +164,7 @@ def decimal(arrayOfDigits):
 for x in range(1,100):
 	print(add(2,5))
 `}</code>
-          </pre>
-        </div>
-      </footer>
+      </pre>
     </div>
   );
 }
