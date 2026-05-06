@@ -1,11 +1,17 @@
 import Gallery from "./gallery";
 import { arts, captionText } from "./arts";
-import { JsonLd, SITE_URL, VERA_ID } from "@/lib/jsonld";
+import { JsonLd, SITE_URL, VERA_ID, og } from "@/lib/jsonld";
 
 export const metadata = {
   title: "Art",
   description:
     "Gallery of paintings by Vera Zhang, contemporary Chinese artist.",
+  openGraph: og({
+    title: "Art — Vera Zhang",
+    description:
+      "Gallery of paintings by Vera Zhang, contemporary Chinese artist.",
+    url: `${SITE_URL}/art`,
+  }),
 };
 
 const galleryUrl = `${SITE_URL}/art`;

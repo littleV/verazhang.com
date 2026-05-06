@@ -1,14 +1,16 @@
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import NavBar from "@/components/navbar";
-import { JsonLd, veraPerson } from "@/lib/jsonld";
+import { JsonLd, veraPerson, SITE_URL, og } from "@/lib/jsonld";
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Vera Zhang",
     template: "%s — Vera Zhang",
   },
   description: "Contemporary Chinese Artist Producing Fine Art.",
+  openGraph: og(),
 };
 
 // Nav links

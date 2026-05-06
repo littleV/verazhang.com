@@ -1,8 +1,14 @@
 import Link from "next/link";
+import { og, SITE_URL } from "@/lib/jsonld";
 
 export const metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for verazhang.com.",
+  openGraph: og({
+    title: "Privacy Policy — Vera Zhang",
+    description: "Privacy policy for verazhang.com.",
+    url: `${SITE_URL}/legal`,
+  }),
 };
 
 export default function Legal() {

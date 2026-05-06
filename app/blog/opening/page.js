@@ -1,8 +1,17 @@
-import { JsonLd, SITE_URL, VERA_ID } from "@/lib/jsonld";
+import { JsonLd, SITE_URL, VERA_ID, og } from "@/lib/jsonld";
 
 export const metadata = {
   title: "开篇寄语",
   description: "第一篇博客：关于完美主义和开始行动。",
+  openGraph: og({
+    type: "article",
+    title: "开篇寄语 — Vera Zhang",
+    description: "第一篇博客：关于完美主义和开始行动。",
+    url: `${SITE_URL}/blog/opening`,
+    locale: "zh_CN",
+    publishedTime: "2018-01-01",
+    authors: [`${SITE_URL}/about`],
+  }),
 };
 
 const url = `${SITE_URL}/blog/opening`;

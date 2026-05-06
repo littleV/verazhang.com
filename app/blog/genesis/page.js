@@ -1,9 +1,18 @@
-import { JsonLd, SITE_URL, VERA_ID } from "@/lib/jsonld";
+import { JsonLd, SITE_URL, VERA_ID, og } from "@/lib/jsonld";
 
 export const metadata = {
   title: "Genesis, a computing model",
   description:
     "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+  openGraph: og({
+    type: "article",
+    title: "Genesis, a computing model — Vera Zhang",
+    description:
+      "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+    url: `${SITE_URL}/blog/genesis`,
+    publishedTime: "2018-11-06",
+    authors: [`${SITE_URL}/about`],
+  }),
 };
 
 const url = `${SITE_URL}/blog/genesis`;
