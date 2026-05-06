@@ -2,15 +2,12 @@ import HomeContent from "./home-content";
 import { og, SITE_URL } from "@/lib/jsonld";
 
 export const metadata = {
-  title: {
-    absolute: "12 Instruments — Vera Zhang",
-  },
   description:
-    "12 Instruments — a 12-piece painting series by contemporary Chinese artist Vera Zhang on musical instruments.",
+    "Personal site of contemporary Chinese artist Vera Zhang — a gallery of paintings, bilingual writing on art and creativity, and a rotating featured series.",
   openGraph: og({
-    title: "12 Instruments — Vera Zhang",
+    title: "Vera Zhang — Contemporary Chinese Artist",
     description:
-      "12 Instruments — a 12-piece painting series by contemporary Chinese artist Vera Zhang on musical instruments.",
+      "Personal site of contemporary Chinese artist Vera Zhang — a gallery of paintings, bilingual writing on art and creativity, and a rotating featured series.",
     url: `${SITE_URL}/`,
   }),
 };
