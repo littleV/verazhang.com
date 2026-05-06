@@ -3,6 +3,27 @@
 
 export const arts = [
   {
+    slug: "love-story-one",
+    title: "Love Story One",
+    titleZh: "爱情故事 一",
+    description: "First sight.",
+    descriptionZh: "初次见面。",
+  },
+  {
+    slug: "love-story-two",
+    title: "Love Story Two",
+    titleZh: "爱情故事 二",
+    description: "In love.",
+    descriptionZh: "深爱。",
+  },
+  {
+    slug: "love-story-three",
+    title: "Love Story Three",
+    titleZh: "爱情故事 三",
+    description: "The wall.",
+    descriptionZh: "隔阂。",
+  },
+  {
     slug: "corner-one",
     title: "Corner One",
     titleZh: "角落 一",

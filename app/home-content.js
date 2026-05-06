@@ -5,16 +5,52 @@ import Slides from "@/components/slides";
 
 const slides = [
   {
-    image: "/art/love-story-one.jpg",
-    name: "First Sight",
+    image: "/art/12-instruments-accordion.jpg",
+    name: "Accordian",
   },
   {
-    image: "/art/love-story-two.jpg",
-    name: "In Love",
+    image: "/art/12-instruments-cello.jpg",
+    name: "Cello",
   },
   {
-    image: "/art/love-story-three.jpg",
-    name: "The Wall",
+    image: "/art/12-instruments-drum.jpg",
+    name: "Drum",
+  },
+  {
+    image: "/art/12-instruments-erhu.jpg",
+    name: "Erhu",
+  },
+  {
+    image: "/art/12-instruments-flute.jpg",
+    name: "Flute",
+  },
+  {
+    image: "/art/12-instruments-guitar.jpg",
+    name: "Guitar",
+  },
+  {
+    image: "/art/12-instruments-guqin.jpg",
+    name: "Guqin",
+  },
+  {
+    image: "/art/12-instruments-hulusi.jpg",
+    name: "Hulusi",
+  },
+  {
+    image: "/art/12-instruments-piano.jpg",
+    name: "Piano",
+  },
+  {
+    image: "/art/12-instruments-pipa.jpg",
+    name: "Pipa",
+  },
+  {
+    image: "/art/12-instruments-trumpet.jpg",
+    name: "Trumpet",
+  },
+  {
+    image: "/art/12-instruments-violin.jpg",
+    name: "Violin",
   },
 ];
 
@@ -25,9 +61,9 @@ export default function HomeContent() {
     <div className="flex flex-col gap-[32px] row-start-2 items-center">
       <h1 className="text-3xl ">
         {language === "English" ? (
-          "The Love Story"
+          "12 Instruments"
         ) : (
-          <span lang="zh">爱情故事</span>
+          <span lang="zh">十二乐</span>
         )}
       </h1>
       <Slides slides={slides} width="80vw" height="70vh" interval={15000} />

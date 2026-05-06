@@ -6,7 +6,7 @@ Vera Zhang is a painter at heart. The site is bilingual (English and 中文); co
 
 ## Main pages
 
-- [Home](https://www.verazhang.com/): The Love Story — a featured three-piece painting series (First Sight, In Love, The Wall).
+- [Home](https://www.verazhang.com/): 12 Instruments — a featured 12-piece painting series on musical instruments.
 - [About](https://www.verazhang.com/about): Bilingual bio written as a short poem.
 - [Art](https://www.verazhang.com/art): Gallery of paintings, each with a bilingual title and short description.
 - [Blog](https://www.verazhang.com/blog): Bilingual writing on art, emotion, and creativity.
