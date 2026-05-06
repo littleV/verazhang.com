@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "开篇寄语",
+  description: "第一篇博客：关于完美主义和开始行动。",
+};
+
 export default function Opening() {
   return (
     <div className="p-2">

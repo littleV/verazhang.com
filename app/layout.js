@@ -3,7 +3,10 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import NavBar from "@/components/navbar";
 
 export const metadata = {
-  title: "Vera Zhang",
+  title: {
+    default: "Vera Zhang",
+    template: "%s — Vera Zhang",
+  },
   description: "Contemporary Chinese Artist Producing Fine Art.",
 };
 

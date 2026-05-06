@@ -1,6 +1,9 @@
-"use client";
-
 import Link from "next/link";
+
+export const metadata = {
+  title: "Privacy Policy",
+  description: "Privacy policy for verazhang.com.",
+};
 
 export default function Legal() {
   return (

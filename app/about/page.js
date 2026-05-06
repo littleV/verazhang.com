@@ -1,4 +1,8 @@
-"use client";
+export const metadata = {
+  title: "About",
+  description:
+    "Bio of Vera Zhang, contemporary Chinese artist. Written in English and 中文.",
+};
 
 export default function About() {
   return (

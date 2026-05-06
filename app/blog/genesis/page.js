@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Genesis, a computing model",
+  description:
+    "A toy computing model where 1+1 ≠ 2, with a Python implementation.",
+};
+
 export default function Genesis() {
   return (
     <div className="w-full max-w-3xl p-2">
