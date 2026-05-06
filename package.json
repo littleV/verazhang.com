@@ -1,6 +1,6 @@
 {
   "name": "verazhang.com",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "cookies-next": "^5.1.0",
-    "next": "^15.5.15",
+    "next": "^16.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"
