@@ -9,7 +9,11 @@ export default function BlogList() {
   return (
     <div className="flex flex-col gap-[2px] row-start-2 items-center sm:items-start">
       <Link className="hover:text-pink-500" href="/blog/opening">
-        <span lang="zh">开篇寄语</span>
+        {language === "English" ? (
+          "To Start"
+        ) : (
+          <span lang="zh">一切的开始</span>
+        )}
       </Link>
       <Link className="hover:text-pink-500" href="/blog/genesis">
         Genesis, a computing model
