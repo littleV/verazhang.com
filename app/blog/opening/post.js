@@ -1,0 +1,62 @@
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
+
+export default function OpeningPost() {
+  const { language } = useLanguage();
+
+  return (
+    <div className="p-2" lang={language === "English" ? undefined : "zh"}>
+      {language === "English" ? (
+        <>
+          <h1 className="text-3xl mb-5">To Start</h1>
+          <div className="mb-2">
+            Perfect results start on white canvases. It all begins from nothing.
+            This site showcases my artworks and curates a history of my growth.
+            If you plan to follow, just remember my name, Vera Zhang — you'll
+            find my footprints all over the site.
+          </div>
+          <div className="mb-2">
+            I didn't know what to write, but I had to start somewhere. Well, let
+            me introduce how I got into the art world. I had a rare opportunity
+            to try a top-class art therapy session. They asked me to draw with a
+            pen, with my eyes closed. Music on, I did. Suddenly, my mind went
+            blank, missing all connection with the outside world. Then a voice
+            came in: "How do you feel?" It was my inner voice, but it came from
+            a friend's care. Tears flowed down, dripping onto the paper — nobody
+            had asked me that question for a long time. I started to pour out my
+            emotions on the paper without knowing what I was drawing. When the
+            music ended, my drawing ended. I opened my eyes — what a
+            masterpiece! The instructor exclaimed, "Vera, look at what you have
+            done!" I was shocked and suddenly understood the core of painting:
+            to express your feelings on the paper. Thus I started painting, with
+            no questions asked.
+          </div>
+          <div className="mb-2">
+            Then, year after year, I created many series — from refining
+            technique to deepening topics — and gained collectors and agents.
+            Then I stopped. Stopped to reflect on what I had done. I'm missing
+            something in my map — a foundation that helps me touch the ground.
+            And that's what I'm doing now, digging into a unique aesthetic
+            practice. Hope you'll like the artist Vera Zhang V2.0.
+          </div>
+        </>
+      ) : (
+        <>
+          <h1 className="text-3xl mb-5">一切的开始</h1>
+          <div className="mb-2">
+            完美的作品始于一张空白画布。一切都从"无"开始。这个网站展示我的作品，也记录我一路成长的历程。如果你想关注我，只需记住我的名字——Vera
+            Zhang，你会在网站的各个角落找到我的足迹。
+          </div>
+          <div className="mb-2">
+            我不知道该写什么，但总得从某个地方开始。好吧，那就讲讲我是怎么走进艺术世界的。我曾有幸参加一次顶级的艺术疗愈课程。他们让我闭上眼睛，握着笔作画。音乐响起，我照做了。突然间，我的脑海一片空白，与外界的一切都断了联系。这时，一个声音传来："你感觉怎么样？"那是我内心的声音，却带着朋友的关怀。泪水滑落，滴在纸上——已经很久没有人问过我这个问题了。我开始在纸上倾泻情绪，完全不知道自己在画什么。音乐结束，我的画也随之停笔。我睁开眼——简直是一幅杰作！导师惊叹道："Vera，看看你做了什么！"我震惊了，那一刻我明白了绘画的核心：在纸上表达你的感受。于是，我开始画画，不再有任何迟疑。
+          </div>
+          <div className="mb-2">
+            年复一年，我创作了许多系列作品——从打磨技法到深化主题——也收获了我的收藏家和代理人。然后，我停下了。停下来，反思自己做过的一切。我的地图上缺了些什么——一种能让我脚踏实地的根基。而这正是我现在在做的事：深耕一套独特的美学实践。希望你会喜欢艺术家
+            Vera Zhang 2.0。
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
