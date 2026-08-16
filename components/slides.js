@@ -8,11 +8,19 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 // const slides = [
 //   {
 //     image: "/1.jpg",
-//     name: "lonely"
+//     name: "lonely",
+//     description: "...",
 //   }
 // ];
 
-export default function Slides({ id, slides, width, height, interval }) {
+export default function Slides({
+  id,
+  slides,
+  language,
+  width,
+  height,
+  interval,
+}) {
   const [current, setCurrent] = useState(0);
   const nextSlide = useCallback(() => {
     setCurrent(current === slides.length - 1 ? 0 : current + 1);
@@ -20,6 +28,7 @@ export default function Slides({ id, slides, width, height, interval }) {
   const prevSlide = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
   };
+  const [isActive, setIsActive] = useState(false);
   useEffect(() => {
     if (interval) {
       const next = setInterval(nextSlide, interval); // Change slide
@@ -57,7 +66,12 @@ export default function Slides({ id, slides, width, height, interval }) {
             }
           >
             {index === current && (
-              <div className="absolute left-0 bottom-0 top-0 right-0">
+              <div
+                className="absolute left-0 bottom-0 top-0 right-0"
+                onMouseEnter={() => setIsActive(true)}
+                onMouseLeave={() => setIsActive(false)}
+                onClick={() => setIsActive(!isActive)}
+              >
                 <Image
                   fill
                   style={{ objectFit: "contain" }}
@@ -65,6 +79,19 @@ export default function Slides({ id, slides, width, height, interval }) {
                   alt={slide.name}
                   priority={true}
                 />
+                <div
+                  className={`absolute inset-0 bg-black/70 flex items-center justify-center p-4 transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0"}`}
+                >
+                  <div className="text-white text-center">
+                    <p>
+                      {language === "English" ? (
+                        <>{slide.description}</>
+                      ) : (
+                        <>{slide.descriptionZH}</>
+                      )}
+                    </p>
+                  </div>
+                </div>
               </div>
             )}
           </div>
